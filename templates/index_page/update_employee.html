@@ -1,0 +1,17 @@
+<form action="{% url 'edit_emp' sel_emp.id %}" method="POST">
+    {% csrf_token %}
+    <h4 class="alert alert-success text-center"> Update data</h4>
+    <div class="mb-3">
+        <input type="text" required class="form-control" value="{{sel_emp.name}}" name="name" placeholder="Enter Name">
+    </div>
+    <div class="mb-3">
+        <input type="number"  class="form-control" value="{{sel_emp.mobile}}" name="mobile" placeholder="Enter mobile">
+    </div>
+    <div class="mb-3">
+    <textarea class="form-control" name="address"  placeholder="enter address here" rows="3">{{sel_emp.address}}</textarea>
+    </div>
+    <div class="mb-3 text-center">
+        <button type="submit"class="btn btn-success" >Update Data</button>
+        <a  href="{% url 'index' %}" class="btn btn-primary" >Add New Data</a>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+<table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">name</th>
+        <th scope="col">mobile</th>
+        <th scope="col">address</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        {% for emp in all_emp %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.mobile}}</td>
+        <td>{{emp.address}}</td>
+        <td>
+
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a type="button" href="{% url 'edit_emp' emp.id %}" class="btn btn-sm btn-warning">EDIT</a>
+            <a type="button" href="{% url 'delete_emp' emp.id %}" class="btn btn-sm btn-danger">DELETE</a>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
