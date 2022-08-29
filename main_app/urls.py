@@ -1,3 +1,4 @@
+""" This file contain all the endpoints or urls related to employees """
 from ast import Delete
 from django.urls import path,include
 from main_app.views import IndexView,DeleteEmployee,EditEmployeeView
