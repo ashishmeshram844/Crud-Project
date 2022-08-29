@@ -1,3 +1,4 @@
+""" This file contain all logical functionality on employees """
 from django.shortcuts import render, HttpResponse,redirect
 from django.views import View
 from .models import Employee
